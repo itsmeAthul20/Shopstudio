@@ -1,0 +1,12 @@
+
+.ad-carousel {
+  width: 100%;          
+  max-width: 1500px;    
+  margin: 20px auto 0; 
+}
+
+.ad-carousel img {
+  border-radius: 10px;
+  width: 100%;         
+  height: auto;       
+}

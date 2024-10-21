@@ -1,0 +1,112 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  
+    background-color: #e0e0e0;
+    padding-top: 60px; 
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #39FF14; 
+    height: 60px;
+    padding: 0 20px;
+    width: 100%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    position: fixed; 
+    top: 0;
+    z-index: 10; 
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 0 15px; 
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #333;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contact .form-container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #39FF14;
+}
+
+button {
+    padding: 15px;
+    background-color: #39FF14;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #32e512;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+span {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
