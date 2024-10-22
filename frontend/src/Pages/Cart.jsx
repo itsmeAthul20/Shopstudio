@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useCart } from '../components/CartContext';
 import '../Styles/Cart.css';
 import Navbar from '../components/Navbar';
-import Ad from '../components/Ad'
+import Ad from '../components/Ad';
 
 const Cart = () => {
   const { cart, removeFromCart } = useCart();
   const [cartItems, setCartItems] = useState([]);
+  const [userInfo, setUserInfo] = useState({ name: '', email: '', address: '' });
+  const [paymentMethod, setPaymentMethod] = useState('creditCard');
 
   useEffect(() => {
     const fetchCartItems = async () => {
@@ -37,6 +39,15 @@ const Cart = () => {
     alert('Order Successful!');
   };
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserInfo({ ...userInfo, [name]: value });
+  };
+
+  const handlePaymentMethodChange = (e) => {
+    setPaymentMethod(e.target.value);
+  };
+
   return (
     <div className='cart'>
       <Navbar />
@@ -61,11 +72,63 @@ const Cart = () => {
           </ul>
         )}
         {cartItems.length > 0 && (
-          <div className="cart-summary">
-            <h3>Cart Summary</h3>
-            <p>Total Items: {cartItems.reduce((total, item) => total + item.quantity, 0)}</p>
-            <p>Total Price: ₹{cartItems.reduce((total, item) => total + item.productId.price * item.quantity, 0).toFixed(2)}</p>
-            <button className="checkout-btn" onClick={handleCheckout}>Proceed to Checkout</button>
+          <div className="checkout-container">
+            <div className="left-side">
+              {/* Cart Summary */}
+              <div className="cart-summary">
+                <h3>Cart Summary</h3>
+                <p>Total Items: {cartItems.reduce((total, item) => total + item.quantity, 0)}</p>
+                <p>Total Price: ₹{cartItems.reduce((total, item) => total + item.productId.price * item.quantity, 0).toFixed(2)}</p>
+
+                {/* User Information */}
+                <div className="user-info">
+                  <h3>User Information</h3>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={userInfo.name}
+                    onChange={handleChange}
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={userInfo.email}
+                    onChange={handleChange}
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="address"
+                    placeholder="Address"
+                    value={userInfo.address}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="right-side">
+              {/* Payment Method Selection */}
+              <div className="payment-method">
+                <h3>Select Payment Method</h3>
+                <select value={paymentMethod} onChange={handlePaymentMethodChange}>
+                  <option value="creditCard">Credit Card</option>
+                  <option value="debitCard">Debit Card</option>
+                  <option value="paypal">Cash on Delivery</option>
+                  <option value="netBanking">Net Banking</option>
+                </select>
+                <h3>Have a Coupon?</h3>
+                <input type="text" placeholder="Enter your coupon code"  />
+                <button className="checkout-btn" onClick={handleCheckout}>Proceed to Checkout</button>
+              </div>
+              <div className="coupon-section">
+            
+            
+          </div>
+            </div>
           </div>
         )}
       </div>

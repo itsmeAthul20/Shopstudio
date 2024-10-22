@@ -1,0 +1,100 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.login-container {
+    
+    background-image: url('https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Audiowide', sans-serif;
+}
+
+
+.Login {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    width: 350px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    text-align: center;
+    font-family: 'Audiowide', sans-serif;
+}
+
+
+.Login h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+
+.Login input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Audiowide', sans-serif;
+}
+
+
+.Login button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #BAFF39;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Audiowide', sans-serif; 
+}
+
+.Login button:hover {
+    background-color: #A8E935;
+}
+
+
+.error {
+    color: red;
+    margin: 10px 0;
+}
+
+
+.bottom {
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+    font-family: 'Audiowide', sans-serif; 
+}
+
+
+.link1 {
+    color: #BAFF39;
+    transition: color 0.3s ease;
+}
+
+.link1:hover {
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+    .Login {
+        width: 90%;
+        padding: 15px;
+    }
+}

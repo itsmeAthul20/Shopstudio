@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+    background-color: #fef2ff;
 }
 
 .contact {
@@ -13,37 +14,6 @@ body, html {
     background-color: #e0e0e0;
     padding-top: 60px; 
     box-sizing: border-box;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #39FF14; 
-    height: 60px;
-    padding: 0 20px;
-    width: 100%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    position: fixed; 
-    top: 0;
-    z-index: 10; 
-}
-
-.navbar a {
-    color: black;
-    text-decoration: none;
-    padding: 0 15px; 
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.navbar a:hover {
-    color: #333;
-}
-
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
 }
 
 .contact .form-container {
@@ -60,7 +30,7 @@ form {
     gap: 20px;
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centers the form horizontally */
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -84,8 +54,8 @@ input:focus, textarea:focus {
 
 button {
     padding: 15px;
-    background-color: #39FF14;
-    color: #000;
+    background-color: #9222ce;
+    color: #ffffff;
     font-size: 18px;
     font-weight: bold;
     border: none;
@@ -95,7 +65,8 @@ button {
 }
 
 button:hover {
-    background-color: #32e512;
+    background-color: #df6ce9;
+    color: #333;
     transform: scale(1.05);
 }
 

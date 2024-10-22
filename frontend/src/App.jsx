@@ -8,6 +8,7 @@ import About from './Pages/About';
 import Admin from './Pages/Admin';
 import { CartProvider } from './components/CartContext';
 import Contact from './Pages/Contact';
+import AdminLogin from './components/AdminLogin';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Login />} />
+              <Route path="/login" element={<AdminLogin />} />
               <Route path="/Signup" element={<Signup />} />
               <Route path="/Home" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
