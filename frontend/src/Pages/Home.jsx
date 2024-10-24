@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
 import Ads from '../components/Ads'
 import Ad from '../components/Ad'
-import '../styles/Home.css';
+import '../Styles/Home.css';
 
 
 const Home = () => {
