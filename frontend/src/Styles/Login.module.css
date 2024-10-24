@@ -90,9 +90,3 @@ body, html {
 }
 
 
-@media (max-width: 600px) {
-    .Login {
-        width: 90%;
-        padding: 15px;
-    }
-}

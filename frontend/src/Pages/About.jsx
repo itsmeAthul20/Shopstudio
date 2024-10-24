@@ -1,8 +1,8 @@
 import React from 'react';
-import '../styles/About.css'; 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Ad from '../components/Ad'
+import '../Styles/About.css'
 const About = () => {
   return (
     <div className='about'>

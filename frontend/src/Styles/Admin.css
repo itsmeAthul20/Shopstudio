@@ -71,13 +71,4 @@
 }
 
 
-@media (max-width: 768px) {
-  .admin-page {
-      margin: 10px; 
-  }
 
-  .admin-page form {
-      padding: 20px; 
-      width: 90%; 
-  }
-}
