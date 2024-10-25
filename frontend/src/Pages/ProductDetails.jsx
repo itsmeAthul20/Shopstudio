@@ -12,7 +12,7 @@ const ProductDetails = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`https://shopstudio.onrender.com/${id}`);
+        const response = await fetch(`http://localhost:5000/api/products/${id}`);
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -36,7 +36,7 @@ const ProductDetails = () => {
       addToCart(productWithId);
   
       try {
-        const response = await fetch('https://shopstudio.onrender.com', {
+        const response = await fetch('http://localhost:5000/api/cart', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
