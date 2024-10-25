@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://shopstudio.onrender.com');
+        const response = await fetch('https://shopstudio.onrender.com/api/products');
         const data = await response.json();
         setProducts(data);
       } catch (error) {

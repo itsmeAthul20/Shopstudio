@@ -13,7 +13,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const response = await fetch('https://shopstudio.onrender.com');
+        const response = await fetch('https://shopstudio.onrender.com/api/cart');
         const data = await response.json();
         setCartItems(data);
       } catch (error) {
@@ -26,7 +26,7 @@ const Cart = () => {
 
   const handleRemoveFromCart = async (itemId) => {
     try {
-      await fetch(`http://localhost:5000/api/cart/${itemId}`, {
+      await fetch(`https://shopstudio.onrender.com/api/cart/${itemId}`, {
         method: 'DELETE',
       });
       setCartItems(cartItems.filter(item => item._id !== itemId));

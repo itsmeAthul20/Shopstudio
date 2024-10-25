@@ -18,7 +18,7 @@ const Admin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://shopstudio.onrender.com', {
+      const response = await fetch('https://shopstudio.onrender.com/api/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
