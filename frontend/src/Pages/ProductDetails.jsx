@@ -36,7 +36,7 @@ const ProductDetails = () => {
       addToCart(productWithId);
   
       try {
-        const response = await fetch('http://localhost:5000/api/cart', {
+        const response = await fetch('https://shopstudio.onrender.com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
